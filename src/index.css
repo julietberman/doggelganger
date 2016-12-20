@@ -18,7 +18,7 @@ video {
    opacity: .5;
 }
 
-#polina {
+#homepage {
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-weight:100;
   background: rgba(0,0,0,0.3);
@@ -30,6 +30,13 @@ video {
   float: right;
   font-size: 1.2rem;
 }
+
+h1.test{
+  font-size: 6em;
+  color: red;
+  text-align: center;
+}
+
 h1 {
   font-size: 2.8rem;
   text-transform: uppercase;
@@ -39,7 +46,7 @@ h1 {
 button {
   display: block;
   width: 80%;
-  padding: .4rem;
+  padding: .8rem;
   border: none;
   margin: 1rem auto;
   font-size: 1.3rem;
@@ -57,26 +64,45 @@ a {
   display: inline-block;
   color: #fff;
   text-decoration: none;
-  padding: .5rem;
+  padding: 0;
+  margin: 0;
   transition: .6s background;
 }
 
-#test{
+#dropzone{
   display: flex;
   justify-content: flex-start;
+  flex-direction: column;
+  min-height: 200px;
 }
+
+
 
 h4{
   margin-bottom: 5px;
 }
 
-#preview{
+#previewbox{
+  border-radius: 5px;
+  height: 200px;
+  margin-left: 20px;
+  padding: 0;
+  overflow: hidden;
+}
+
+#previewbox>img{
   max-height: 200px;
-  padding: 0 20px;
   display: inline-block;
+  padding: 0;
+  margin: 0;
 }
 
 #droptext{
   text-align: center;
   padding: 10px;
+}
+
+#test{
+  display: flex;
+  flex-direction: row;
 }
