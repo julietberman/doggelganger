@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import TodoModel from '../models/Todo'
-import Todos from '../components/Todos'
-import DropZoneDemo from '../components/DropZone'
+import DropZoneDemo from '../components/DropZoneDemo'
 
 
 class UploadContainer extends Component{
@@ -50,7 +49,7 @@ class UploadContainer extends Component{
   render(){
     return(
       <div className="TodosContainer">
-        <h3>Upload a photo below:</h3>
+        <h4>Upload a photo below:</h4>
         <DropZoneDemo/>
       </div>
     )

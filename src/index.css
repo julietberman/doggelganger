@@ -62,5 +62,21 @@ a {
 }
 
 #test{
+  display: flex;
+  justify-content: flex-start;
+}
+
+h4{
+  margin-bottom: 5px;
+}
+
+#preview{
+  max-height: 200px;
+  padding: 0 20px;
+  display: inline-block;
+}
+
+#droptext{
+  text-align: center;
   padding: 10px;
 }
