@@ -8,7 +8,7 @@ class UploadContainer extends Component{
     return(
       <div>
         <h4>Upload a photo below:</h4>
-        <DropZoneDemo/>
+        <DropZoneDemo upload={this.props.upload}/>
       </div>
     )
   }

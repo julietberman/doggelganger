@@ -7,15 +7,15 @@ class HomepageContainer extends Component{
   constructor(){
     super()
     this.state = {
-      flag: 0
+      flag: false
     }
   }
 
 
   showUploadFeature(e){
     this.setState({
-      flag: this.state.flag + 1
-    }, console.log(this.state.flag))
+      flag: true
+    })
   }
 
   render(){
@@ -29,7 +29,7 @@ class HomepageContainer extends Component{
 
           <button onClick={e => this.showUploadFeature(e)}>Find Your Match</button>
 
-          {this.state.flag > 0 ? <UploadContainer /> : null}
+          {this.state.flag == true ? <UploadContainer upload={this.props.upload}/> : null}
 
         </div>
 

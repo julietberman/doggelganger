@@ -7,7 +7,7 @@ import ResultsContainer from '../containers/ResultsContainer'
 
 module.exports=(
   <Route path='/' component={App}>
-    <Route path='/homepage' component={HomepageContainer} />
+    <Route path='/homepage'  component={HomepageContainer} />
     <Route path='/results' component={ResultsContainer} />
   </Route>
 )

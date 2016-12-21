@@ -15,8 +15,7 @@ class DropzoneDemo extends Component{
     this.setState({
       files: acceptedFiles
     })
-
-    
+    this.props.upload(acceptedFiles)
   }
 
     render() {
