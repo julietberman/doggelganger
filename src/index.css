@@ -32,19 +32,28 @@ video {
 }
 
 h1.resultHeader{
-  font-size: 4em;
+  font-size: 3.2em;
   color: white;
   font-family: Helvetica;
   text-align: center;
   text-transform: none;
 }
 
-h1 {
+h1, h3 {
   font-size: 2.8rem;
   text-transform: uppercase;
   margin-top: 0;
   letter-spacing: .2rem;
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight:100;
+  color: white;
+  transition: all .3s ease-in-out;
 }
+
+h3{
+  display: inline-block;
+}
+
 button {
   display: block;
   width: 80%;
@@ -120,14 +129,13 @@ h4{
 }
 
 .resultData{
-  width: 40vw;
-  height: 50vh;
+  width: 30vw;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   overflow: show;
   margin: 10px;
-  border: 2px solid red;
 }
 
 .resultImg > img{
@@ -144,6 +152,7 @@ main{
   align-items: center;
   align-content: center;
   height: 100vh;
+  background-color: rgba(0, 0, 0, .7);
 }
 
 section{
@@ -152,8 +161,8 @@ section{
   justify-content: center;
   align-items: center;
   width: 90vw;
-  height: 70vh;
-  background-color: rgba(0, 0, 0, .6);
+
+  padding: 0 20px;
 }
 
 div > h2 {
@@ -161,9 +170,24 @@ div > h2 {
   font-weight:100;
   color: white;
   margin: 10px;
-  padding: 0;
+  padding-left: 0;
+}
+div.resultData > button {
+  width: 80%;
+  padding: 1rem;
+}
+
+h3:hover{
+  transform: scale(1.1);
 }
 
 span{
   font-weight:900;
+}
+
+img.logo{
+  width: 30px;
+  margin: 0 30px;
+  padding: 0;
+
 }

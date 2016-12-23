@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import PetFinder from '../models/PetFinder'
+import {Link} from 'react-router'
 
 class ResultsContainer extends Component{
   constructor(){
     super()
     this.state = {
+      percentMatch: [],
       photo: [],
       name: [],
       breed: [],
@@ -20,12 +22,13 @@ class ResultsContainer extends Component{
 
   fetchData(){
     PetFinder.all().then((res) => {
-    console.log(res.data.petfinder.pet)
+    let percentMatch = (Math.random() * (95 - 30) + 30).toFixed(2)
     let name = res.data.petfinder.pet.name.$t
     let photo = res.data.petfinder.pet.media.photos.photo[2].$t
     let age = res.data.petfinder.pet.age.$t
     let id = res.data.petfinder.pet.id.$t
     let sex = res.data.petfinder.pet.sex.$t
+    let breed = ""
     let gender = ""
 
     if (sex === "M"){
@@ -36,27 +39,23 @@ class ResultsContainer extends Component{
     }
 
      if((res.data.petfinder.pet.breeds.breed[0]) === undefined){
-        let breed = res.data.petfinder.pet.breeds.breed.$t
-          this.setState({
-              photo,
-              name,
-              breed,
-              age,
-              id,
-              gender
-            })
+         breed = res.data.petfinder.pet.breeds.breed.$t
+
      }
      else{
-       let breed = res.data.petfinder.pet.breeds.breed[0].$t
-       this.setState({
-           photo,
-           name,
-           breed,
-           age,
-           id,
-           gender
-         })
+        breed = res.data.petfinder.pet.breeds.breed[0].$t
+
      }
+
+     this.setState({
+        percentMatch,
+        photo,
+        name,
+        breed,
+        age,
+        id,
+        gender
+       })
   })
   }
 
@@ -64,7 +63,13 @@ class ResultsContainer extends Component{
     return(
       <div>
       <main>
-        <h1 className="resultHeader">You've been matched!</h1>
+
+      <div>
+      <img src="pawprint.png" role="presentation" className="logo" />
+        <h3><Link to={'/homepage'}>DOGGELGÄNGER 2.0</Link></h3><img src="pawprint.png" role="presentation" className="logo" />
+      </div>
+
+        <h1 className="resultHeader">You and {this.state.name} have a {this.state.percentMatch}% match!</h1>
         <section>
         <div className="resultImg">
         {this.props.image.map((image, i) => <img key={i} role="presentation" src={image.preview}/>)}
