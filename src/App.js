@@ -1,29 +1,22 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router'
 
 
 class App extends Component {
   constructor(){
     super()
     this.state = {
-      image_upload: [],
-      test: "hello state of parent"
+      image_upload: []
     }
   }
 
   userImage(file){
-    this.setState({image_upload: file}, () => {console.log(this.state.image_upload)});
-
+    this.setState({image_upload: file});
   }
-
-  fetchData(){
-      // insert code here to grab pet API info via a model
-    }
-
 
   render() {
     var children = React.cloneElement(this.props.children, {
-      upload: this.userImage.bind(this)
+      upload: this.userImage.bind(this),
+      image: this.state.image_upload
     })
 
     return (

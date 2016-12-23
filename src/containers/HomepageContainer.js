@@ -29,7 +29,7 @@ class HomepageContainer extends Component{
 
           <button onClick={e => this.showUploadFeature(e)}>Find Your Match</button>
 
-          {this.state.flag == true ? <UploadContainer upload={this.props.upload}/> : null}
+          {this.state.flag === true ? <UploadContainer upload={this.props.upload}/> : null}
 
         </div>
 

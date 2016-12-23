@@ -31,10 +31,12 @@ video {
   font-size: 1.2rem;
 }
 
-h1.test{
-  font-size: 6em;
-  color: red;
+h1.resultHeader{
+  font-size: 4em;
+  color: white;
+  font-family: Helvetica;
   text-align: center;
+  text-transform: none;
 }
 
 h1 {
@@ -48,7 +50,7 @@ button {
   width: 80%;
   padding: .8rem;
   border: none;
-  margin: 1rem auto;
+  margin: .5rem auto;
   font-size: 1.3rem;
   background: rgba(255,255,255,0.23);
   color: #fff;
@@ -105,4 +107,63 @@ h4{
 #test{
   display: flex;
   flex-direction: row;
+}
+
+.resultImg{
+  width: 30vw;
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.resultData{
+  width: 40vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: show;
+  margin: 10px;
+  border: 2px solid red;
+}
+
+.resultImg > img{
+  object-fit: cover;
+  height: 100%;
+  position: relative;
+  border-radius: 5px;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+}
+
+section{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 70vh;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+div > h2 {
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight:100;
+  color: white;
+  margin: 10px;
+  padding: 0;
+}
+
+span{
+  font-weight:900;
 }

@@ -2,7 +2,6 @@ import React from 'react'
 import {Route} from 'react-router'
 import App from '../App'
 import HomepageContainer from '../containers/HomepageContainer'
-import UploadContainer from '../containers/UploadContainer'
 import ResultsContainer from '../containers/ResultsContainer'
 
 module.exports=(
