@@ -59,7 +59,8 @@ button {
   width: 80%;
   padding: .8rem;
   border: none;
-  margin: .5rem auto;
+  margin: auto;
+  margin-top: 30px;
   font-size: 1.3rem;
   background: rgba(255,255,255,0.23);
   color: #fff;
